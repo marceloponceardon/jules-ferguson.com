@@ -5,9 +5,9 @@ Portfolio website for Jules Ferguson
 This project is a collaborative effort to build a portfolio website for Jules Ferguson. 
 
 ## Project Goals
-- Create a visually appealing and user-friendly website.
+- Create a visually appealing and user-friendly website that can be shown off to colleagues.
 - Implement responsive design to ensure compatibility across various devices.
-- Develop key functionalities as outlined in the project scope (TBD)
+- Use GitHub Actions to auto deploy site on upgrades, maintenance, etc.
 
 ## Technology Stack
 - **Front-End:** TBD
