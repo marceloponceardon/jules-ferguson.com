@@ -1,4 +1,4 @@
-# jules-portfolio
+# jules-ferguson.com
 Portfolio website for Jules Ferguson
 
 ## Overview
