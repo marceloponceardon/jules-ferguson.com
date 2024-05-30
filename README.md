@@ -27,7 +27,7 @@ This project is a collaborative effort to build a portfolio website for Jules Fe
     - Run `npm start` to start the application.
     - Run `npm build` to build the application.
 
-3. `backend/`: Run `npm install` to install dependencies.
+3. `backend/`:
     - Run `npm install` to install dependencies.
     - Run `npm start` to start the application.
     - Run `npm build` to build the application.
