@@ -1,9 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Components
+import {Nav, About, CommunityWork, Contact, CV, Gallery, Home} from './components';
+
 function App() {
   return (
     <div className="App">
+			<Nav />
+			<Home />
+			<About />
+			<CommunityWork />
+			<Contact />
+			<CV />
+			<Gallery />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
