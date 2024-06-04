@@ -34,3 +34,28 @@
 	width: 5em;
 	text-align: left;
 }
+
+.Footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-decoration: none;
+}
+
+.Footer-Buttons {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	vertical-align: middle;
+}
+
+.Footer-Buttons a {
+	color: inherit;
+	text-decoration: inherit;
+	background-color: grey;
+	width: 10em;
+	margin: 0.5em;
+	height: 2.5em;
+}

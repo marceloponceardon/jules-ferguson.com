@@ -1,11 +1,12 @@
 import './App.css';
 
 // Components
-import {Nav, About, CommunityWork, Contact, CV, Gallery, Home} from './components';
+import {Header, Footer, Nav, About, CommunityWork, Contact, CV, Gallery, Home} from './components';
 
 function App() {
   return (
     <div className="App">
+			<Header />	
 			<Nav />
 			<Home />
 			<About />
@@ -13,6 +14,7 @@ function App() {
 			<Contact />
 			<CV />
 			<Gallery />
+			<Footer />
     </div>
   );
 }
