@@ -3,7 +3,7 @@ import '../App.css';
 // Header component
 function Header() {
 	return (
-		<header>
+		<header className="Header">
 		This is the header
 		</header>
 	);
