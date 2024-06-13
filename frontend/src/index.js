@@ -2,7 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Layout from './App';
+import './App.css';
+import Layout from './Layout';
 import { About, CommunityWork, Contact, CV, Gallery, Home, NoPage } from './components';
 import reportWebVitals from './reportWebVitals';
 

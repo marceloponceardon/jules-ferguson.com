@@ -1,6 +1,3 @@
-import './App.css';
-
-// Components
 import { Header, Footer, Nav } from './components';
 
 function Layout() {
@@ -12,7 +9,5 @@ function Layout() {
     </div>
   );
 }
-
-// By default, hide other "page" components except for the Home page
 
 export default Layout;

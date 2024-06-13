@@ -1,5 +1,3 @@
-import '../App.css';
-
 // Header component
 function Header() {
 	return (

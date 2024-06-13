@@ -1,5 +1,3 @@
-import '../App.css';
-
 // Contact Page Component
 function Contact() {
 	return (

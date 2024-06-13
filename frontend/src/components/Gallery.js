@@ -1,5 +1,3 @@
-import '../App.css';
-
 // Gallery page component
 function Gallery() {
 	return (

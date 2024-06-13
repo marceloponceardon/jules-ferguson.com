@@ -1,4 +1,3 @@
-import '../App.css';
 import { Outlet, Link } from 'react-router-dom';
 // Navigation bar component
 

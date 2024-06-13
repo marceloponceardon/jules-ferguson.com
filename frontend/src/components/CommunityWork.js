@@ -1,5 +1,3 @@
-import '../App.css';
-
 // CommunityWork Page component
 function CommunityWork() {
 	return (

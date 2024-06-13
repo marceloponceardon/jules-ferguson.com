@@ -1,5 +1,3 @@
-import '../App.css';
-
 // About component
 function About() {
 	return (

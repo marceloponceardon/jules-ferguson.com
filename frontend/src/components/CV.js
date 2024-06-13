@@ -1,5 +1,3 @@
-import '../App.css';
-
 // CV component
 function CV() {
 	return (

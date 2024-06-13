@@ -1,5 +1,3 @@
-import '../App.css';
-
 // Home page component
 function Home() {
 	return (

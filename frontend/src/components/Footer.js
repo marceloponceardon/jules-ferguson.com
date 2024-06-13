@@ -1,5 +1,3 @@
-import '../App.css';
-
 // Footer component
 function Footer() {
 	return (
