@@ -7,5 +7,6 @@ import Gallery from './Gallery'
 import Home from './Home'
 import Header from './Header'
 import Footer from './Footer'
+import NoPage from './NoPage.js'
 // For facilitating imports
-export {Nav, About, CommunityWork, Contact, CV, Gallery, Home, Header, Footer}
+export { Nav, About, CommunityWork, Contact, CV, Gallery, Home, Header, Footer, NoPage }

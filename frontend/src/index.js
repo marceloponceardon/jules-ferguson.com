@@ -1,13 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import Layout from './App';
+import { About, CommunityWork, Contact, CV, Gallery, Home, NoPage } from './components';
 import reportWebVitals from './reportWebVitals';
 
 if (process.env.NODE_ENV === 'production') {
 	console.log = () => {}
 	console.error = () => {}
 	console.debug = () => {}
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="about" element={<About />} />
+					<Route path="community-work" element={<CommunityWork />} />
+					<Route path="gallery" element={<Gallery />} />
+					<Route path="cv" element={<CV />} />
+					<Route path="contact" element={<Contact />} />
+					<Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,32 +1,25 @@
 import '../App.css';
-
+import { Outlet, Link } from 'react-router-dom';
 // Navigation bar component
 
-// Navigate to the 'page' with the given name
-function Navigate(name) {
-	console.log('navigated to: ' + name);
-	const components = document.getElementsByClassName("App-component");
-	for (let i = 0; i < components.length; i++) {
-		components[i].style.display = "none";
-	}
-	const selected = document.getElementById(name);
-	selected.style.display = "block";
-
-}
-
 function Nav() {
+	// Hide all other components other than home first
 	return (
+		<>
 		<nav className="Navigation">
 			<div className="Nav-Buttons">
-				<a id="Title" href="#home" onClick={() => Navigate("Home")}>Jules Ferguson</a>
-				<a href="#home" onClick={() => Navigate("Home")}>Home</a>
-				<a href="#about" onClick={() => Navigate("About")}>About</a>
-				<a href="#community-work" onClick={() => Navigate("CommunityWork")}>Community Work</a>
-				<a href="#contact" onClick={() => Navigate("Contact")}>Contact</a>
-				<a href="#cv" onClick={() => Navigate("CV")}>CV</a>
-				<a href="#gallery" onClick={() => Navigate("Gallery")}>Gallery</a>
+				<Link to="/" id="Title">Jules Ferguson</Link>
+				<Link to="/">Home</Link>
+				<Link to="/about">About</Link>
+				<Link to="/community-work">Community Work</Link>
+				<Link to="/gallery">Gallery</Link>
+				<Link to="/cv">CV</Link>
+				<Link to="/contact">Contact</Link>
 			</div>
 		</nav>
+
+		<Outlet />
+		</>
 	);
 }
 

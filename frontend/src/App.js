@@ -1,22 +1,18 @@
 import './App.css';
 
 // Components
-import {Header, Footer, Nav, About, CommunityWork, Contact, CV, Gallery, Home} from './components';
+import { Header, Footer, Nav } from './components';
 
-function App() {
+function Layout() {
   return (
     <div className="App">
 			<Header />	
 			<Nav />
-			<Home />
-			<About />
-			<CommunityWork />
-			<Contact />
-			<CV />
-			<Gallery />
 			<Footer />
     </div>
   );
 }
 
-export default App;
+// By default, hide other "page" components except for the Home page
+
+export default Layout;
