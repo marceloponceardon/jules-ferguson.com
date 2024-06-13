@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Navigation bar component
 
 function Nav() {
@@ -7,7 +7,6 @@ function Nav() {
 		<>
 		<nav className="Navigation">
 			<div className="Nav-Buttons">
-				<Link to="/" id="Title">Jules Ferguson</Link>
 				<Link to="/">Home</Link>
 				<Link to="/about">About</Link>
 				<Link to="/community-work">Community Work</Link>
@@ -16,8 +15,6 @@ function Nav() {
 				<Link to="/contact">Contact</Link>
 			</div>
 		</nav>
-
-		<Outlet />
 		</>
 	);
 }

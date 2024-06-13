@@ -1,9 +1,15 @@
+import { Link } from 'react-router-dom';
 // Header component
+
 function Header() {
 	return (
+		<>
 		<header className="Header">
-		This is the header
+				<Link to="/" id="Title">
+					<h1>Jules Ferguson</h1>
+				</Link>
 		</header>
+		</>
 	);
 }
 
