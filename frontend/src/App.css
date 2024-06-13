@@ -16,6 +16,8 @@
 
 .App {
   text-align: center;
+	min-height: 100vh;
+	margin: 0;
 }
 
 nav {
@@ -72,17 +74,15 @@ header .Header-Title {
 
 
 footer {
-	bottom: 0;
 	background-color: var(--background);
-	vertical-align: middle;
 	color: var(--text);
 	margin: 2em;
-	margin-right: 2em;
+	height: 10vh;
 }
 
 footer .Footer-Buttons {
 	margin: 0.5em;
-	height: 2.5em;
+	vertical-align: middle;
 }
 
 footer .Footer-Buttons .social-svg-mask {
