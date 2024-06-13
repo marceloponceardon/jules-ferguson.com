@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 function Header() {
 	return (
 		<>
-		<header className="Header">
-				<Link to="/" id="Title">
+		<header>
+				<Link to="/" className="Header-Title">
 					<h1>Jules Ferguson</h1>
 				</Link>
 		</header>

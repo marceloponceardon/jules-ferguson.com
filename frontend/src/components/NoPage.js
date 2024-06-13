@@ -2,7 +2,7 @@
 function NoPage() {
 	return (
 		<div className="App-component" id="NoPage">
-			<h1>404 Page Not Found</h1>
+			<h3>404 Page Not Found</h3>
 				<p>
 					Looks like you have found a page that does not exist! please navigate back to the home page!
 				</p>

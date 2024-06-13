@@ -5,7 +5,7 @@ function Nav() {
 	// Hide all other components other than home first
 	return (
 		<>
-		<nav className="Navigation">
+		<nav>
 			<div className="Nav-Buttons">
 				<Link to="/">Home</Link>
 				<Link to="/about">About</Link>

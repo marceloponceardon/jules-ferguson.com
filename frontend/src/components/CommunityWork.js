@@ -3,7 +3,7 @@ function CommunityWork() {
 	return (
 		<div className="App-component" id="CommunityWork">
 			<header className="CommunityWork-header">
-				<h1>Community Work</h1>
+				<h2>Community Work</h2>
 			</header>
 		</div>
 	);

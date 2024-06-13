@@ -2,7 +2,7 @@
 function CV() {
 	return (
 		<div className="App-component" id="CV">
-			<h1>CV</h1>
+			<h2>CV</h2>
 			<p>This is a paragraph</p>
 		</div>
 	);

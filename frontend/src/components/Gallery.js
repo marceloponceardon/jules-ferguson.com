@@ -2,7 +2,7 @@
 function Gallery() {
 	return (
 		<div className="App-component" id="Gallery">
-			<h1>Gallery</h1>
+			<h2>Gallery</h2>
 		</div>
 	);
 }

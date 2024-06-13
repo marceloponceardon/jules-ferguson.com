@@ -2,7 +2,7 @@
 function About() {
 	return (
 		<div className="App-component" id="About">
-			<h1>About</h1>
+			<h2>About</h2>
 			<p>This is the about page</p>
 			<div className="Paragraph-Text">
 				<p>
