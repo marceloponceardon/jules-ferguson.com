@@ -1,0 +1,51 @@
+:root {
+	/* Variables */
+	--primary: #EA624A;
+	--secondary: #2F805B;
+	--tertiary: #D67B74;
+	--quaternary: #204124;
+	--quinary: #804E49;
+	--text: #100c08;
+	--text-highlight: black;
+	--text-background: white;
+	--background: #F8F1E1;
+
+	color: var(--text);
+	background-color: var(--background);
+}
+
+.App {
+  text-align: center;
+	margin: 0;
+}
+
+footer {
+	background-color: var(--background);
+	color: var(--text);
+	margin: 2em;
+	height: 10vh;
+	position: absolute;
+	width: 100%;
+	margin: 0;
+
+}
+
+footer .Footer-Buttons {
+	margin: 0.5em;
+	vertical-align: middle;
+}
+
+footer .Footer-Buttons .social-svg-mask {
+	fill: var(--secondary) !important;
+}
+
+footer .Footer-Buttons .social-svg:hover .social-svg-mask{
+	transition: all .2s ease-in;
+	color: var(--background);
+	fill: var(--tertiary) !important;
+}
+
+@import url('./laptop.css');
+@import url('./tablet.css');
+@import url('./mobile.css');
+@import url('./largescreen.css');

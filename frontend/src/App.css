@@ -14,9 +14,12 @@
 	background-color: var(--background);
 }
 
+body {
+	min-height: 90vh;
+}
+
 .App {
   text-align: center;
-	min-height: 100vh;
 	margin: 0;
 }
 

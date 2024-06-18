@@ -1,0 +1,91 @@
+/* Large screen styles */
+@media screen and (min-width: 1440px) {
+	
+	/* Navigation */
+
+	/* Disable hamburger menu */
+	[class^=Nav-Hamburger] {
+		display: none;
+	}
+	
+	.Nav-Buttons {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		vertical-align: middle;
+	}
+	
+	.Nav-Buttons a {
+		color: inherit;
+		text-decoration: inherit;
+		background-color: var(--primary);
+		color: var(--text-alt);
+		width: 10em;
+		margin: 0.5em;
+		height: 2.5em;
+	}
+	
+	.Nav-Buttons a:hover {
+		transition: all .2s ease-in;
+		background-color: var(--secondary);
+	}
+	
+	header {
+		margin: 1em;
+	}
+	
+	header .Header-Title {
+		margin: 1em;
+		text-decoration: none;
+		color: var(--text);
+	}
+	
+	.Header-Title h1 {
+		margin: 0;
+		font-weight: 100;
+		font-size: 4em;
+	}
+	
+	.Header-Title h1:hover {
+		transition: all .2s ease-in;
+		color: var(--text-highlight);
+	}
+	
+	
+	footer {
+		background-color: var(--background);
+		color: var(--text);
+		margin: 2em;
+		height: 10vh;
+	}
+	
+	footer .Footer-Buttons {
+		margin: 0.5em;
+		vertical-align: middle;
+	}
+	
+	footer .Footer-Buttons .social-svg-mask {
+		fill: var(--secondary) !important;
+	}
+	
+	footer .Footer-Buttons .social-svg:hover .social-svg-mask{
+		transition: all .2s ease-in;
+		color: var(--background);
+		fill: var(--tertiary) !important;
+	}
+	
+	p {
+		text-align: left;
+		margin-left: 3em;
+		margin-right: 3em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		padding: 5em;
+		padding-top: 4em;
+		padding-bottom: 4em;
+		border: 3px solid var(--quinary);
+		background-color: var(--background);
+	}
+}
