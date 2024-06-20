@@ -83,23 +83,25 @@ nav {
 	
 	.Nav-Buttons {
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 		vertical-align: middle;
 
-		a h1 {
-			margin: 0;
-			width: 7em;
-		}
-		
 		a {
 			text-decoration: none;
 			transition: .3s ease-in;
 			/* background-color: var(--secondary); */
 			color: var(--primary);
 			margin: 0.5em;
+			margin-bottom: 3em;
+
 			height: 2.5em;
+
+			h1 {
+				margin: 0;
+				width: 6em;
+			}
 
 			.SVG-Container {
 				width: 0;
