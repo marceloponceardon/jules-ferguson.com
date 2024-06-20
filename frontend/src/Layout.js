@@ -6,8 +6,12 @@ function Layout() {
   return (
 		<>
     <div className="App">
-			<Header />
-			<Nav />
+			<span>
+				<div className="Flex-gap"></div>
+				<Header />
+				<Nav />
+				<div className="Flex-gap"></div>
+			</span>
 			<TransitionGroup>
 				<CSSTransition>
 					<Outlet />

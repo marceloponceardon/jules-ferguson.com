@@ -3,6 +3,7 @@ function Home() {
 	return (
 		<div className="Page" id="home">
 			<span>
+				<div className="Flex-gap"></div>
 				<img src="" alt="Jules Ferguson Portrait"/>
 				<p>
 					<h1>Jules Ferguson</h1>
@@ -36,6 +37,7 @@ function Home() {
 						especially their hands, Jules’ recent work explores how to talk about pain and
 						learning to navigate the world with their ever-changing needs.
 				</p>
+				<div className="Flex-gap"></div>
 			</span>
 		</div>
 	);

@@ -1,8 +1,7 @@
 /* Header */
 
 header {
-	margin: 3em;
-	padding: 3em;
+	margin: 0;
 	align: middle;
 	display: flex;
 	align-items: center;
@@ -20,7 +19,7 @@ header {
 
 			span[id]:not(#SVG-Container) {
 				font-family: 'Lazy Dog', sans-serif;
-				font-size: 3em;
+				font-size: 2em;
 			}
 
 			#jules {
@@ -37,17 +36,17 @@ header {
 				height: 0;
 
 				#blob {
-				position: relative;
-				width: 15em;
-				left: -26.5em;
-				top: -7em;
-				height: auto;
-				z-index: -1;	
-
-				path {
-					fill: var(--secondary);
-					transition: 0.3s ease-in;
-				}
+					flex-shrink: 0;
+					position: relative;
+					height: auto;
+					z-index: -1;	
+					height: 12em;
+					left: -40em;
+					top: -6.5em;
+					path {
+						fill: var(--secondary);
+						transition: 0.3s ease-in;
+					}
 			}
 		}
 			
@@ -78,14 +77,14 @@ header {
 
 
 nav {
-	padding: 0.5em;
+	margin: 0;
 	vertical-align: middle;
-	top: 0;
 	background-color: inherit;
+	display: flex;
 	
-	.Nav-Buttons {
+	div.Nav-Buttons {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
 
@@ -130,7 +129,7 @@ nav {
 				#blob11 {
 					width: 7em;
 					left: -0.5em;
-					top: -5em;
+					top: -4.5em;
 				}
 
 				[id^=blob] {
@@ -165,6 +164,26 @@ nav {
 	}
 }
 
+/* Header-Nav layout */
+
+.App span {
+	display: flex;
+
+	header {
+		flex: 3;
+	}
+
+	nav {
+		flex: 4;
+	}
+	
+	div.Flex-gap {
+		flex: 1;
+	}
+
+}
+
+
 /* Pages */
 
 .Page {
@@ -185,7 +204,7 @@ nav {
 			width: auto;
 			font-family: 'Helvetica', sans-serif;
 			font-weight: lighter;
-			text-align: left;
+			text-align: justify;
 		}
 
 		p {
@@ -200,10 +219,15 @@ nav {
 			img {
 				flex: 1;
 				height: auto;
+				border: 3px solid black;
 			}
 
 			p {
 				flex: 2;
+			}
+
+			div.Flex-gap {
+				flex: 1;
 			}
 		}
 	}
