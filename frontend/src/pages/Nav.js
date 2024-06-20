@@ -17,7 +17,7 @@ function Nav() {
 					</span>
 				</Link>
 				<Link to="/selected-works" id="nav-selected-work">
-					<h1>Selected Works</h1>
+					<h1>Selected<br/>Works</h1>
 					<span className="SVG-Container">
 						<Blob7 id="blob7"/>
 					</span>
