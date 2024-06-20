@@ -20,14 +20,14 @@
 }
 
 footer {
-	background-color: var(--background);
+	background-color: transparent;
 	color: var(--text);
 	margin: 2em;
 	height: 10vh;
 	position: absolute;
 	width: 100%;
 	margin: 0;
-
+	z-index: -1;
 }
 
 footer .Footer-Buttons {
@@ -41,7 +41,7 @@ footer .Footer-Buttons .social-svg-mask {
 
 footer .Footer-Buttons .social-svg:hover .social-svg-mask{
 	transition: all .2s ease-in;
-	color: var(--background);
+	color: transparent;
 	fill: var(--tertiary) !important;
 }
 

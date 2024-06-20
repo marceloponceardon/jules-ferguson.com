@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Layout from './Layout';
-import { About, CommunityWork, Contact, CV, Gallery, Home, NoPage } from './components';
+import { Contact, CV, Gallery, Home, NoPage } from './components';
 import reportWebVitals from './reportWebVitals';
 
 if (process.env.NODE_ENV === 'production') {
@@ -18,9 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
 					<Route index element={<Home />} />
-					<Route path="about" element={<About />} />
-					<Route path="community-work" element={<CommunityWork />} />
-					<Route path="gallery" element={<Gallery />} />
+					<Route path="selected-work" element={<Gallery />} />
 					<Route path="cv" element={<CV />} />
 					<Route path="contact" element={<Contact />} />
 					<Route path="*" element={<NoPage />} />
