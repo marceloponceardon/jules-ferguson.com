@@ -1,6 +1,4 @@
 import Nav from './Nav'
-import About from './About'
-import CommunityWork from './CommunityWork'
 import Contact from './Contact'
 import CV from './CV'
 import Gallery from './Gallery'
@@ -9,4 +7,4 @@ import Header from './Header'
 import Footer from './Footer'
 import NoPage from './NoPage.js'
 // For facilitating imports
-export { Nav, About, CommunityWork, Contact, CV, Gallery, Home, Header, Footer, NoPage }
+export { Nav, Contact, CV, Gallery, Home, Header, Footer, NoPage }
