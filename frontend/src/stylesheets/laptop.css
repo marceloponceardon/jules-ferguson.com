@@ -42,7 +42,7 @@ header {
 					z-index: -1;	
 					height: 12em;
 					left: -40em;
-					top: -6.5em;
+					top: -5.5em;
 					path {
 						fill: var(--secondary);
 						transition: 0.3s ease-in;
@@ -93,8 +93,7 @@ nav {
 			transition: .3s ease-in;
 			/* background-color: var(--secondary); */
 			color: var(--primary);
-			margin: 2.5em;
-			margin-bottom: 3em;
+			margin: 1.5em;
 			height: auto;
 
 			h1 {
@@ -163,26 +162,6 @@ nav {
 
 	}
 }
-
-/* Header-Nav layout */
-
-.App span {
-	display: flex;
-
-	header {
-		flex: 3;
-	}
-
-	nav {
-		flex: 4;
-	}
-	
-	div.Flex-gap {
-		flex: 1;
-	}
-
-}
-
 
 /* Pages */
 
@@ -262,4 +241,47 @@ nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+/* Layouts */
+
+@media (max-width: 1440px) {
+	/* Header-Nav Layout */
+	.App > span {
+		display: flex;
+		margin: 5em;
+
+		header {
+			flex: 1;
+		}
+	
+		nav {
+			flex: 2;
+		}
+		
+		div.Flex-gap {
+			flex: 1;
+		}
+	
+	}
+}
+
+/* Largest Screen layout */
+@media (min-width: 1441px) {
+	/* Header-Nav Layout */
+	.App > span {
+		display: inline-block;
+
+		header {
+			margin: 5em;
+		}
+	
+		nav {
+			display: block;
+
+			div.Nav-Buttons {
+					
+			}
+		}
+	}
 }
