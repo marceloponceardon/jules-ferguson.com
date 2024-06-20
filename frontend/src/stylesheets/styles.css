@@ -49,12 +49,17 @@ footer a {
 }
 
 footer a .social-svg-mask {
+	transition: .3s ease-in;
 	fill: var(--secondary) !important;
 }
 
+footer a .social-svg-icon {
+	fill: var(--quinary);
+}
+
 footer a .social-svg:hover .social-svg-mask{
-	transition: all .2s ease-in;
-	fill: var(--tertiary) !important;
+	transition: .3s ease-in;
+	fill: var(--primary) !important;
 }
 
 @import url('./laptop.css');

@@ -1,23 +1,17 @@
-/* Navigation */
-
-/* Disable Hamburguer Menu */
-[class^=Nav-Hamburger] {
-	display: none;
-}
-
 /* Header */
 
 header {
-	margin: 3em;
-	padding: 3em;
+	margin: 4em;
+	padding: 2em;
 	align: middle;
 	display: flex;
+	align-items: center;
 	justify-content: center;
 
 	a.Header-Title {
 		text-decoration: none;
 		align-items: center;
-		height: 2em;
+		height: auto;
 		
 		div {
 			display: flex;
@@ -75,6 +69,12 @@ header {
 
 /* Navigataion */
 
+/* Disable Hamburguer Menu */
+[class^=Nav-Hamburger] {
+	display: none;
+}
+
+
 nav {
 	padding: 0.5em;
 	vertical-align: middle;
@@ -86,24 +86,66 @@ nav {
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
-		text-decoration: none;
 		vertical-align: middle;
+
+		a h1 {
+			margin: 0;
+			width: 7em;
+		}
 		
 		a {
-			color: inherit;
-			text-decoration: inherit;
-			background-color: var(--secondary);
+			text-decoration: none;
+			transition: .3s ease-in;
+			/* background-color: var(--secondary); */
 			color: var(--primary);
-			width: 10em;
 			margin: 0.5em;
 			height: 2.5em;
+
+			.SVG-Container {
+				width: 0;
+				height: 0;
+
+				#blob9 {
+					width: 4em;
+					top: -3em;
+				}
+
+				#blob7 {
+					width: 9em;
+					top: -6em;
+				}
+
+				[id^=blob] {
+				position: relative;
+				width: 9em;
+				top: -5.5em;
+				height: auto;
+				z-index: -1;	
+
+				path {
+					fill: var(--secondary);
+					transition: 0.3s ease;
+				}
+
+
+			}
 		}
+	}
 	
 		a:hover {
-			transition: all .2s ease-in;
-			background-color: var(--primary);
+			transition: .3s ease-in;
+			/* background-color: var(--primary); */
 			color: var(--secondary);
+
+			[id^=blob] {
+				path {
+					fill: var(--primary);
+					transition: 0.3s ease-in;
+				}
+			}
 		}
+
+
 	}
 }
 
