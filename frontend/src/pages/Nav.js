@@ -6,10 +6,18 @@ function Nav() {
 		<>
 		<nav>
 			<div className="Nav-Buttons">
-				<Link to="/">Home</Link>
-				<Link to="/selected-work">Selected Works</Link>
-				<Link to="/cv">CV</Link>
-				<Link to="/contact">Contact</Link>
+				<Link to="/" id="nav-home">
+					<h1>About</h1>
+				</Link>
+				<Link to="/selected-work" id="nav-selected-work">
+					<h1>Selected Work</h1>
+				</Link>
+				<Link to="/cv" id="nav-cv">
+					<h1>CV</h1>
+				</Link>
+				<Link to="/contact" id="nav-contact">
+					<h1>Contact</h1>
+				</Link>
 			</div>
 			{/* Hamburger menu for mobile and tablet */}
 			<input type="checkbox" className="Nav-Hamburger-Input" id="hamburger-input"/>
@@ -25,10 +33,7 @@ function Nav() {
 					<div className="Nav-Hamburger-Sidebar-Overlay"></div>
 				</div>
 			</label>
-			<input type="button" className="Nav-Hamburger-Overlay-Input" id="overlay-input"/>
-			<label htmlFor="overlay-input" className="Nav-Hamburger-Overlay">
-				<div className="Nav-Hamburger-Overlay"></div>
-			</label>
+			<div className="Nav-Hamburger-Overlay"></div>
 		</nav>
 		</>
 	);

@@ -1,14 +1,14 @@
 // Home page component
 function Home() {
 	return (
-		<div className="App-component" id="Home">
+		<div className="Page" id="home">
 			<h1>Jules Ferguson</h1>
-			<div className="Home-Image">
+			<div id="profile">
 				insert image here
 			</div>
-			<h2>she/they</h2>
-			<h3>Photographer - Editor</h3>
-			<h3>Researcher - Fundraiser</h3>
+			<h4>she/they</h4>
+			<h5>Photographer - Editor</h5>
+			<h5>Researcher - Fundraiser</h5>
 			<p>
 					Jules is a femme photographer and mixed media artist who’s work explores
 					violence, pain and queerness. They were raised in Calgary - the land that has

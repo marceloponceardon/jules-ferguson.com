@@ -1,9 +1,9 @@
 :root {
 	/* Variables */
-	--primary: #EA624A;
-	--secondary: #2F805B;
-	--tertiary: #D67B74;
-	--quaternary: #204124;
+	--primary: #2F805B;
+	--secondary: #AED3B0; 
+	--tertiary: #EA624A;
+	--quaternary:#D67B74;
 	--quinary: #804E49;
 	--text: #100c08;
 	--text-highlight: black;
@@ -19,10 +19,23 @@
 	margin: 0;
 }
 
+
+/* Default styles */
+
+h1, h2, h3 {
+	font-family: 'Lazy Dog', sans-serif;
+}
+
+p {
+	width: auto;
+	hyphens: auto;
+	word-break: break-word;
+	font-weight: thin;
+	text-align: left;
+}
+
 footer {
-	background-color: transparent;
 	color: var(--text);
-	margin: 2em;
 	height: 10vh;
 	position: absolute;
 	width: 100%;
@@ -30,22 +43,18 @@ footer {
 	z-index: -1;
 }
 
-footer .Footer-Buttons {
+footer a {
 	margin: 0.5em;
 	vertical-align: middle;
 }
 
-footer .Footer-Buttons .social-svg-mask {
+footer a .social-svg-mask {
 	fill: var(--secondary) !important;
 }
 
-footer .Footer-Buttons .social-svg:hover .social-svg-mask{
+footer a .social-svg:hover .social-svg-mask{
 	transition: all .2s ease-in;
-	color: transparent;
 	fill: var(--tertiary) !important;
 }
 
 @import url('./laptop.css');
-@import url('./tablet.css');
-@import url('./mobile.css');
-@import url('./largescreen.css');
