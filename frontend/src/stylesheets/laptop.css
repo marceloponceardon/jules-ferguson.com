@@ -5,59 +5,101 @@
 	display: none;
 }
 
+/* Header */
+
+header {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+
+	a.Header-Title {
+		text-decoration: none;
+		align-items: center;
+		
+		span {
+			position: relative;
+			display: flex;
+			width: 100%;
+
+			#jules {
+				color: var(--background);
+				transition: 0.3s ease;
+			}
+	
+			#ferguson {
+				position: relative;
+				left: 0.5em;
+				color: var(--primary);
+			}
+
+			.SVG-Container {
+				width: 0em;
+				height: 0em;
+
+				#blob {
+				position: relative;
+				width: 10em;
+				height: auto;
+				top: -3em;
+				left: -17em;
+				z-index: -1;	
+				path {
+					fill: var(--secondary);
+				}
+			}
+		}
+			
+		}
+	}
+
+	.Header-Title:hover {
+		#ferguson {
+			color: var(--secondary);
+			transition: .3s ease;
+		}
+		
+		.SVG-Container #blob {
+			path {
+				fill: var(--primary);
+				transition: 0.3s ease;
+			}
+		}
+	}
+}
+
+/* Navigataion */
+
 nav {
 	padding: 0.5em;
 	vertical-align: middle;
 	top: 0;
 	background-color: inherit;
-}
-
-.Nav-Buttons {
-	display: flex;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	vertical-align: middle;
-}
-
-.Nav-Buttons a {
-	color: inherit;
-	text-decoration: inherit;
-	background-color: var(--secondary);
-	color: var(--primary);
-	width: 10em;
-	margin: 0.5em;
-	height: 2.5em;
-}
-
-.Nav-Buttons a:hover {
-	transition: all .2s ease-in;
-	background-color: var(--primary);
-	color: var(--secondary);
-}
-
-/* Header */
-
-header {
-	margin: 1em;
-}
-
-header .Header-Title {
-	margin: 1em;
-	text-decoration: none;
-}
-
-.Header-Title {
-	font-size: 3em;
-	color: var(--primary);
-	background-color: var(--secondary);
-}
-
-.Header-Title:hover {
-	transition: all .2s ease-in;
-	color: var(--secondary);
-	background-color: var(--primary);
+	
+	.Nav-Buttons {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		vertical-align: middle;
+		
+		a {
+			color: inherit;
+			text-decoration: inherit;
+			background-color: var(--secondary);
+			color: var(--primary);
+			width: 10em;
+			margin: 0.5em;
+			height: 2.5em;
+		}
+	
+		a:hover {
+			transition: all .2s ease-in;
+			background-color: var(--primary);
+			color: var(--secondary);
+		}
+	}
 }
 
 /* Home/About */

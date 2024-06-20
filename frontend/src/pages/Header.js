@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ReactComponent as LogoBlob } from '../content/5.svg';
 // Header component
 
 function Header() {
@@ -6,9 +7,13 @@ function Header() {
 		<>
 		<header>
 				<Link to="/" className="Header-Title">
-					<h1>Jules</h1>
-					<div id="header-blob"></div>
-					<h1>Ferguson</h1>
+					<span>
+						<h1 id="jules">Jules</h1>
+						<h1 id="ferguson">Ferguson</h1>
+						<div className="SVG-Container">
+							<LogoBlob id="blob"/>	
+						</div>
+					</span>
 				</Link>
 		</header>
 		</>
