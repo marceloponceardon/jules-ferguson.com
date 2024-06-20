@@ -8,44 +8,49 @@
 /* Header */
 
 header {
-	margin: 0;
-	padding: 0;
+	margin: 3em;
+	padding: 3em;
+	align: middle;
 	display: flex;
 	justify-content: center;
 
 	a.Header-Title {
 		text-decoration: none;
 		align-items: center;
+		height: 2em;
 		
-		span {
-			position: relative;
+		div {
 			display: flex;
 			width: 100%;
+			white-space: pre;
+
+			span[id]:not(#SVG-Container) {
+				font-family: 'Lazy Dog', sans-serif;
+				font-size: 3em;
+			}
 
 			#jules {
 				color: var(--background);
-				transition: 0.3s ease;
 			}
 	
 			#ferguson {
-				position: relative;
-				left: 0.5em;
 				color: var(--primary);
+				transition: 0.3s ease;
 			}
 
 			.SVG-Container {
-				width: 0em;
-				height: 0em;
-
+				width: 0;
+				height: 0;
 				#blob {
 				position: relative;
-				width: 10em;
+				width: 15em;
+				left: -26em;
+				top: -7em;
 				height: auto;
-				top: -3em;
-				left: -17em;
 				z-index: -1;	
 				path {
 					fill: var(--secondary);
+					transition: 0.3s ease;
 				}
 			}
 		}

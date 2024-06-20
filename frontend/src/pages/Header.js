@@ -7,13 +7,14 @@ function Header() {
 		<>
 		<header>
 				<Link to="/" className="Header-Title">
-					<span>
-						<h1 id="jules">Jules</h1>
-						<h1 id="ferguson">Ferguson</h1>
-						<div className="SVG-Container">
+					<div>
+						<span id="jules">Jules</span>
+						<span id="space">&nbsp;</span>
+						<span id="ferguson">Ferguson</span>
+						<span className="SVG-Container">
 							<LogoBlob id="blob"/>	
-						</div>
-					</span>
+						</span>
+					</div>
 				</Link>
 		</header>
 		</>
