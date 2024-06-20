@@ -1,8 +1,8 @@
 /* Header */
 
 header {
-	margin: 4em;
-	padding: 2em;
+	margin: 3em;
+	padding: 3em;
 	align: middle;
 	display: flex;
 	align-items: center;
@@ -35,13 +35,15 @@ header {
 			.SVG-Container {
 				width: 0;
 				height: 0;
+
 				#blob {
 				position: relative;
 				width: 15em;
-				left: -26em;
+				left: -26.5em;
 				top: -7em;
 				height: auto;
 				z-index: -1;	
+
 				path {
 					fill: var(--secondary);
 					transition: 0.3s ease-in;
@@ -55,7 +57,7 @@ header {
 	.Header-Title:hover {
 		#ferguson {
 			color: var(--secondary);
-			transition: .3s ease-in;
+			transition: 0.3s ease-in;
 		}
 		
 		.SVG-Container #blob {
@@ -92,10 +94,9 @@ nav {
 			transition: .3s ease-in;
 			/* background-color: var(--secondary); */
 			color: var(--primary);
-			margin: 0.5em;
+			margin: 2.5em;
 			margin-bottom: 3em;
-
-			height: 2.5em;
+			height: auto;
 
 			h1 {
 				margin: 0;
@@ -105,21 +106,35 @@ nav {
 			.SVG-Container {
 				width: 0;
 				height: 0;
+				position: relative;
+				display: block;
 
-				#blob9 {
-					width: 4em;
-					top: -3em;
+				#blob5 {
+					width: 5em;
+					left: -0.3em;
+					top: -3.5em;
 				}
 
 				#blob7 {
 					width: 9em;
 					top: -6em;
+					left: -1.25em;
+				}
+
+				#blob9 {
+					width: 4em;
+					top: -3em;
+					left: -1.1em;
+				}
+
+				#blob11 {
+					width: 7em;
+					left: -0.5em;
+					top: -5em;
 				}
 
 				[id^=blob] {
 				position: relative;
-				width: 9em;
-				top: -5.5em;
 				height: auto;
 				z-index: -1;	
 
@@ -134,7 +149,7 @@ nav {
 	}
 	
 		a:hover {
-			transition: .3s ease-in;
+			transition: 0.3s ease-in;
 			/* background-color: var(--primary); */
 			color: var(--secondary);
 
@@ -150,17 +165,71 @@ nav {
 	}
 }
 
+/* Pages */
+
+.Page {
+	/* Home/About */
+	&#home {
+		h1 {
+			color: var(--primary);
+			text-align: left;
+		}
+	
+		h2 {
+			font-family: 'Helvetica', sans-serif;
+			font-weight: normal;
+			text-align: left;
+		}
+
+		h3 {
+			width: auto;
+			font-family: 'Helvetica', sans-serif;
+			font-weight: lighter;
+			text-align: left;
+		}
+
+		p {
+			margin: 3em;
+			margin-top: 0em;
+			margin-bottom: 0em;
+		}
+
+		span {
+			display: flex;
+
+			img {
+				flex: 1;
+				height: auto;
+			}
+
+			p {
+				flex: 2;
+			}
+		}
+	}
+
+	/* Gallery (Selected Works) */
+	&#gallery {
+
+	}
+
+	/* CV */
+	&#cv {
+
+	}
+
+	/* Contact */
+	&#contact {
+
+	}
+
+}
+
+
 /* Home/About */
 
 #home.Page {
 
-	h1 {
-		color: var(--primary);
-	}
-
-	h4, h5 {
-
-	}
 
 }
 
