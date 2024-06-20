@@ -29,7 +29,7 @@ header {
 	
 			#ferguson {
 				color: var(--primary);
-				transition: 0.3s ease;
+				transition: 0.3s ease-in;
 			}
 
 			.SVG-Container {
@@ -44,7 +44,7 @@ header {
 				z-index: -1;	
 				path {
 					fill: var(--secondary);
-					transition: 0.3s ease;
+					transition: 0.3s ease-in;
 				}
 			}
 		}
@@ -55,13 +55,13 @@ header {
 	.Header-Title:hover {
 		#ferguson {
 			color: var(--secondary);
-			transition: .3s ease;
+			transition: .3s ease-in;
 		}
 		
 		.SVG-Container #blob {
 			path {
 				fill: var(--primary);
-				transition: 0.3s ease;
+				transition: 0.3s ease-in;
 			}
 		}
 	}
@@ -124,7 +124,7 @@ nav {
 
 				path {
 					fill: var(--secondary);
-					transition: 0.3s ease;
+					transition: 0.3s ease-in;
 				}
 
 
