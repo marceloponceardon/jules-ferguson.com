@@ -27,7 +27,6 @@ h1, h2, h3 {
 }
 
 p {
-	width: auto;
 	font-weight: lighter;
 	hyphens: none;
 	text-align: justify;

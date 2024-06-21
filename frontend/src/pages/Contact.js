@@ -7,6 +7,7 @@ function Contact() {
 				You can contact me through my email or phone number. I am also available
 				on social media.	
 			</p>
+			
 		</div>
 	);
 }
