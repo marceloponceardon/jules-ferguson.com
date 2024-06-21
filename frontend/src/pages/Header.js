@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoBlob } from '../content/5.svg';
+import { ReactComponent as LogoBlob } from '../content/3.svg';
 // Header component
 
 function Header() {

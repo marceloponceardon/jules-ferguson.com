@@ -2,7 +2,7 @@
 function Home() {
 	return (
 		<div className="Page" id="home">
-			<span>
+			<span className="Content">
 				<div className="Flex-gap"></div>
 				<img src="" alt="Jules Ferguson Portrait"/>
 				<p>
