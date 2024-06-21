@@ -24,6 +24,7 @@ header {
 
 			#jules {
 				color: var(--background);
+				margin-right: 0.4em;
 			}
 	
 			#ferguson {
@@ -34,15 +35,17 @@ header {
 			.SVG-Container {
 				width: 0;
 				height: 0;
+				position: relative;
+				display: block;
 
 				#blob {
 					flex-shrink: 0;
-					position: relative;
 					height: auto;
-					z-index: -1;	
+					z-index: -1;
 					height: 12em;
-					left: -40em;
-					top: -5.5em;
+					width: 12em;
+					left: -30em;
+
 					path {
 						fill: var(--secondary);
 						transition: 0.3s ease-in;
@@ -91,7 +94,6 @@ nav {
 		a {
 			text-decoration: none;
 			transition: .3s ease-in;
-			/* background-color: var(--secondary); */
 			color: var(--primary);
 			margin: 1.5em;
 			height: auto;

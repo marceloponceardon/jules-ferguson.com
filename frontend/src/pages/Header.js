@@ -9,7 +9,6 @@ function Header() {
 				<Link to="/" className="Header-Title">
 					<div>
 						<span id="jules">Jules</span>
-						<span id="space">&nbsp;</span>
 						<span id="ferguson">Ferguson</span>
 						<span className="SVG-Container">
 							<LogoBlob id="blob"/>	
