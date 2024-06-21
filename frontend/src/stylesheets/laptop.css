@@ -175,6 +175,7 @@ nav {
 			color: var(--primary);
 			text-align: left;
 			margin-bottom: 0;
+			margin-top: 0;
 		}
 	
 		h2 {
@@ -197,7 +198,8 @@ nav {
 			text-align: justify;
 			hyphens: none;
 		}
-
+		
+		/* Layout */
 		span.Content {
 			display: flex;
 
@@ -229,7 +231,89 @@ nav {
 
 	/* Contact */
 	&#contact {
+	
+		/* Layout */
+		span.Content {
+			display: flex;
 
+			p {
+				flex: 1;
+				h2 {
+					color: var(--primary);
+				}
+			}
+
+			form {
+				font-family: 'Montserat', sans-serif;
+				flex: 2;
+				display: block;
+				text-align: left;
+				margin: 1em;
+
+				input[type=text], input[type=email], textarea {
+					width: 100%;
+					border-radius: 10px;
+					resize: vertical;
+					border: 3px solid var(--primary);
+					background-color: var(--secondary);
+					color: var(--text);
+					padding: 1em;
+				}
+
+				label {
+					position: relative;
+					height: 0;
+					width: 10em;
+					top: -2.25em;
+					left: 1em;
+					font-family: 'Montserat', sans-serif;
+					color: var(--primary);
+					transition: 0.1s ease-in;
+				}
+
+				/* The label after the textarea must be translated further */
+				textarea + label {
+					top: -9.5em;
+				}
+
+				/* Translate the label when the input is focused */
+				input[type=text]:focus + label {
+					top: -4em;
+					left: 1.25em;
+					font-size: 0.8em;
+					transition: 0.2s ease-in;
+				}
+
+				textarea:focus + label {
+					top: -10.25em;
+					font-size: 0.8em;
+					transition: 0.2s ease-in;
+				}
+
+				input[type=submit] {
+					background-color: var(--primary);
+					color: var(--secondary);
+					margin-top: 1em;
+					padding: 1em 2em;
+					border: none;
+					border-radius: 10px;
+					cursor: pointer;
+					font-family: 'Montserat', sans-serif;
+					transition: 0.3s ease-in;
+				}
+
+				input[type=submit]:hover {
+					background-color: var(--secondary);
+					color: var(--primary);
+					transition: 0.3s ease-in;
+				}
+			}
+
+			div.Flex-gap {
+				flex: 1;
+			}
+
+		}
 	}
 
 }

@@ -2,13 +2,11 @@
 	/* Variables */
 	--primary: #2F805B;
 	--secondary: #AED3B0; 
-	--tertiary: #EA624A;
-	--quaternary:#D67B74;
-	--quinary: #804E49;
 	--text: #100c08;
 	--text-highlight: black;
 	--text-background: white;
 	--background: #F8F1E1;
+	--background-alt: #F0E3C5;
 
 	color: var(--text);
 	background-color: var(--background);
