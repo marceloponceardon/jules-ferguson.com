@@ -9,8 +9,7 @@ function Home() {
 					<h1>Jules Ferguson</h1>
 					<h2>she/they</h2>
 					<h3>
-						Photographer - Editor<br/>
-						Researcher - Fundraiser
+						Photographer - Educator -	Researcher
 					</h3>
 						Jules is a femme photographer and mixed media artist who’s work explores
 						violence, pain and queerness. They were raised in Calgary - the land that has

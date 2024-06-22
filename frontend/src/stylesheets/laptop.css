@@ -179,17 +179,15 @@ nav {
 		}
 	
 		h2 {
-			font-family: 'Montserat', sans-serif;
-			font-weight: 300;
 			text-align: left;
 			margin-top: 0;
+			font-size: 1em;
 		}
 
 		h3 {
 			width: auto;
-			font-family: 'Montserat', sans-serif;
-			font-weight: 300;
 			text-align: justify;
+			font-weight: 400;
 		}
 
 		p {
@@ -238,8 +236,15 @@ nav {
 
 			p {
 				flex: 1;
-				h2 {
+				margin-top: 0;
+				margin-right: 1em;
+
+				h1 {
+					margin-top: 0;
 					color: var(--primary);
+					/* Align the text to the center */
+					text-align: center;
+					text-align-last: center;
 				}
 			}
 
@@ -248,64 +253,90 @@ nav {
 				flex: 2;
 				display: block;
 				text-align: left;
-				margin: 1em;
+
+				div.form-group {
+					margin: 0;
+					margin-top: .5em;
+					margin-bottom: .5em;
+					height: auto;
+				}
 
 				input[type=text], input[type=email], textarea {
 					width: 100%;
 					border-radius: 10px;
 					resize: vertical;
-					border: 3px solid var(--primary);
-					background-color: var(--secondary);
+					border: 2px solid var(--primary);
+					background-color: transparent;
 					color: var(--text);
 					padding: 1em;
+				}
+
+				textarea {
+					height: 12em;
+					/* Disable resizing */
+					resize: none;
 				}
 
 				label {
 					position: relative;
 					height: 0;
-					width: 10em;
+					width: 0;
 					top: -2.25em;
 					left: 1em;
 					font-family: 'Montserat', sans-serif;
 					color: var(--primary);
 					transition: 0.1s ease-in;
+					/* Prevent the label from being selected */
+					user-select: none;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					z-index: -1;
 				}
 
 				/* The label after the textarea must be translated further */
-				textarea + label {
-					top: -9.5em;
+				label#message {
+					position: relative;
+					top: -6.75em;
+				}
+
+				input, textarea {
+					box-sizing: border-box;
 				}
 
 				/* Translate the label when the input is focused */
 				input[type=text]:focus + label {
-					top: -4em;
+					top: -5em;
 					left: 1.25em;
-					font-size: 0.8em;
+					font-size: 0.6em;
 					transition: 0.2s ease-in;
 				}
 
-				textarea:focus + label {
-					top: -10.25em;
-					font-size: 0.8em;
+				input[type=text]:not(:placeholder-shown) + label {
+					top: -5em;
+					left: 1.25em;
+					font-size: 0.6em;
 					transition: 0.2s ease-in;
 				}
 
 				input[type=submit] {
 					background-color: var(--primary);
 					color: var(--secondary);
-					margin-top: 1em;
+					margin: 1em;
 					padding: 1em 2em;
 					border: none;
 					border-radius: 10px;
 					cursor: pointer;
-					font-family: 'Montserat', sans-serif;
+					font-family: 'Lazy Dog', sans-serif;
 					transition: 0.3s ease-in;
+					position: inline-block;
 				}
 
 				input[type=submit]:hover {
 					background-color: var(--secondary);
 					color: var(--primary);
-					transition: 0.3s ease-in;
+					transition: color 0.3s ease-in;
 				}
 			}
 

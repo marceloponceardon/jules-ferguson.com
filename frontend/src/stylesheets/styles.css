@@ -5,7 +5,7 @@
 	--text: #100c08;
 	--text-highlight: black;
 	--text-background: white;
-	--background: #F8F1E1;
+	--background: #FAFAFA; /* #F8F1E1;*/
 	--background-alt: #F0E3C5;
 
 	color: var(--text);
@@ -20,8 +20,13 @@
 
 /* Default styles */
 
-h1, h2, h3 {
+h1 {
 	font-family: 'Lazy Dog', sans-serif;
+}
+
+h2, h3 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
 }
 
 p {

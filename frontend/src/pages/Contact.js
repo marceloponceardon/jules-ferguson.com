@@ -8,21 +8,25 @@ function Contact() {
 				<span className="Content">
 				<div className="Flex-gap"></div>
 				<p>
-					<h2>Contact Me</h2>
-					Insert some flavour text here Jules.
+					<h1>Contact Me</h1>
+						Want to work with me? <br />
+						Let's get in touch and figure it out!
 				</p>
 				<form className="contact-form">
-					<input type="text" name="first-name" id="first-name" />
-					<label id="first-name">First Name</label>
-	
-					<input type="text" name="last-name" id="last-name" />
-					<label id="last-name">Last Name</label>
+					<div className="form-group">
+						<input type="text" name="name" id="name" placeholder={" "} />
+						<label id="name">Name</label>
+					</div>
 
-					<input type="text" name="email" id="email" />
-					<label id="email">Email</label>
+					<div className="form-group">
+						<input type="text" name="email" id="email" placeholder={" "} />
+						<label id="email">Email</label>
+					</div>
 
-					<textarea name="message" id="message" rows="5" />
-					<label id="message">Message</label>
+					<div className="form-group">
+						<textarea name="message" id="message" placeholder={" "} />
+						<label id="message">Message</label>
+					</div>
 			
 					<input type="submit" value="Submit" />
 				</form>
