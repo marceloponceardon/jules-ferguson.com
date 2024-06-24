@@ -1,0 +1,66 @@
+:root {
+	/* Variables */
+	--primary: #2F805B;
+	--secondary: #AED3B0; 
+	--text: #100c08;
+	--text-highlight: black;
+	--text-background: white;
+	--background: #FAFAFA; /* #F8F1E1;*/
+	--background-alt: #F0E3C5;
+
+	color: var(--text);
+	background-color: var(--background);
+}
+
+.App {
+  text-align: center;
+	margin: 0;
+}
+
+
+/* Default styles */
+
+h1 {
+	font-family: 'Lazy Dog', sans-serif;
+}
+
+h2, h3 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+
+p {
+	font-weight: lighter;
+	hyphens: none;
+	text-align: justify;
+	text-align-last: left;
+}
+
+footer {
+	color: var(--text);
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	z-index: -1;
+}
+
+footer a {
+	margin: 0.5rem;
+	vertical-align: middle;
+}
+
+footer a .social-svg-mask {
+	transition: .3s ease-in;
+	fill: var(--secondary) !important;
+}
+
+footer a .social-svg-icon {
+	fill: var(--quinary);
+}
+
+footer a .social-svg:hover .social-svg-mask{
+	transition: .3s ease-in;
+	fill: var(--primary) !important;
+}
+
+@import url('./laptop.css');

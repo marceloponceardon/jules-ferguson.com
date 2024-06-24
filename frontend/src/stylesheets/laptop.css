@@ -1,0 +1,438 @@
+/* Header */
+
+header {
+	margin: 0;
+	align: middle;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a.Header-Title {
+		text-decoration: none;
+		align-items: center;
+		height: auto;
+		
+		div {
+			display: flex;
+			width: 100%;
+			white-space: pre;
+
+			span[id]:not(#SVG-Container) {
+				font-family: 'Lazy Dog', sans-serif;
+				font-size: 2rem;
+			}
+
+			#jules {
+				color: var(--background);
+				margin-right: 0.4rem;
+			}
+	
+			#ferguson {
+				color: var(--primary);
+				transition: 0.3s ease-in;
+			}
+
+			.SVG-Container {
+				width: 0;
+				height: 0;
+				display: block;
+
+				#blob {
+					flex-shrink: 0;
+					height: auto;
+					z-index: -1;
+					position: relative;
+
+					height: 12rem;
+					width: 9.25rem;
+					left: -17.7rem;
+					top: -5rem;
+
+					path {
+						fill: var(--secondary);
+						transition: 0.3s ease-in;
+					}
+			}
+		}
+			
+		}
+	}
+
+	.Header-Title:hover {
+		#ferguson {
+			color: var(--secondary);
+			transition: 0.3s ease-in;
+		}
+		
+		.SVG-Container #blob {
+			path {
+				fill: var(--primary);
+				transition: 0.3s ease-in;
+			}
+		}
+	}
+}
+
+/* Navigataion */
+
+/* Disable Hamburguer Menu */
+[class^=Nav-Hamburger] {
+	display: none;
+}
+
+
+nav {
+	margin: 0;
+	vertical-align: middle;
+	background-color: inherit;
+	display: flex;
+	
+	div.Nav-Buttons {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+
+		a {
+			text-decoration: none;
+			transition: .3s ease-in;
+			color: var(--primary);
+			margin: 1.5rem;
+			height: auto;
+
+			h1 {
+				margin: 0;
+				width: auto;
+			}
+
+			.SVG-Container {
+				width: 0;
+				height: 0;
+				display: block;
+
+				#blob5 {
+					width: 5rem;
+					left: -0.3rem;
+					top: -3.5rem;
+				}
+
+				#blob7 {
+					width: 9rem;
+					top: -6rem;
+					left: -1.25rem;
+				}
+
+				#blob9 {
+					width: 4rem;
+					top: -3rem;
+					left: -1.1rem;
+				}
+
+				#blob11 {
+					width: 7rem;
+					left: -0.5rem;
+					top: -4.5rem;
+				}
+
+				[id^=blob] {
+				position: relative;
+				height: auto;
+				z-index: -1;	
+
+				path {
+					fill: var(--secondary);
+					transition: 0.3s ease-in;
+				}
+
+
+			}
+		}
+	}
+	
+		a:hover {
+			transition: 0.3s ease-in;
+			/* background-color: var(--primary); */
+			color: var(--secondary);
+
+			[id^=blob] {
+				path {
+					fill: var(--primary);
+					transition: 0.3s ease-in;
+				}
+			}
+		}
+
+
+	}
+}
+
+/* Pages */
+
+.Page {
+	/* Home/About */
+	&#home {
+		h1 {
+			color: var(--primary);
+			text-align: left;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	
+		h2 {
+			text-align: left;
+			margin-top: 0;
+			font-size: 1rem;
+		}
+
+		h3 {
+			width: auto;
+			text-align: justify;
+			font-weight: 400;
+		}
+
+		p {
+			margin: 3rem;
+			margin-top: 0;
+			text-align: justify;
+			hyphens: none;
+		}
+		
+		/* Layout */
+		span.Content {
+			display: flex;
+
+			img {
+				flex: 1;
+				height: auto;
+				border: 3px solid black;
+			}
+
+			p {
+				flex: 2;
+			}
+
+			div.Flex-gap {
+				flex: 1;
+			}
+		}
+	}
+
+	/* Gallery (Selected Works) */
+	&#gallery {
+
+	}
+
+	/* CV */
+	&#cv {
+
+	}
+
+	/* Contact */
+	&#contact {
+	
+		/* Layout */
+		span.Content {
+			display: flex;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+
+			p {
+				flex: 1;
+				margin-top: 0;
+				margin-right: 1rem;
+
+				h1 {
+					margin-top: 0;
+					color: var(--primary);
+					/* Align the text to the center */
+					text-align: center;
+					text-align-last: center;
+				}
+			}
+
+			form {
+				flex: 2;
+				display: block;
+				text-align: left;
+
+				div.form-group {
+					margin: 0;
+					margin-top: .5rem;
+					margin-bottom: .5rem;
+					height: auto;
+				}
+
+				input[type=text], input[type=email], textarea {
+					width: 100%;
+					border-radius: 10px;
+					resize: vertical;
+					border: 2px solid var(--primary);
+					background-color: transparent;
+					color: var(--text);
+					padding: 1rem;
+				}
+
+				textarea {
+					min-height: 10rem;
+					/* Disable resizing */
+					resize: none;
+				}
+
+				label {
+					position: relative;
+					height: 0;
+					width: 0;
+					top: -2.5rem;
+					left: 1rem;
+					color: var(--primary);
+					transition: 0.1s ease-in;
+					/* Prevent the label from being selected */
+					user-select: none;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					-o-user-select: none;
+					z-index: -1;
+				}
+
+				/* The label after the textarea must be translated further */
+				label#message {
+					position: relative;
+					top: -9.5rem;
+				}
+
+				input, textarea {
+					box-sizing: border-box;
+					font-family: 'Poppins', sans-serif;
+				}
+
+				/* Translate the label when the input is focused */
+				input:focus + label {
+					top: -3.5rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.2s ease-in;
+				}
+
+				input:not(:placeholder-shown) + label {
+					top: -3.5rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
+				}
+
+				textarea:focus + label#message {
+					top: -10.1rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
+				}
+
+				textarea:not(:placeholder-shown) + label#message {
+					top: -10.1rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
+				}
+
+				input[type=submit] {
+					background-color: var(--primary);
+					color: var(--secondary);
+					padding: 1rem 2rem;
+					border: none;
+					border-radius: 10px;
+					cursor: pointer;
+					font-family: 'Lazy Dog', sans-serif;
+					transition: 0.3s ease-in;
+					position: inline-block;
+				}
+
+				input[type=submit]:hover {
+					background-color: var(--secondary);
+					color: var(--primary);
+					transition: color 0.3s ease-in;
+				}
+
+				/* On click, change the color of the button */
+				input[type=submit]:active {
+					background-color: var(--background);
+					color: var(--primary);
+					transition: color 0.3s ease-in;
+				}
+			}
+
+			div.Flex-gap {
+				flex: 1;
+			}
+
+		}
+	}
+
+}
+
+
+/* Home/About */
+
+#home.Page {
+
+
+}
+
+/* Gallery */
+#gallery.Page {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Layouts */
+
+/* Laptop Layout */
+@media (max-width: 1440px) {
+	/* Header-Nav Layout */
+	.App > span {
+		display: flex;
+		margin: 5rem;
+
+		header {
+			flex: 1;
+		}
+	
+		nav {
+			flex: 2;
+			div.Nav-Buttons {
+				a {
+					margin-left: 1.5rem;
+					margin-right: 1.5rem;
+				}
+			}
+		}
+		
+		div.Flex-gap {
+			flex: 1;
+		}
+	
+	}
+}
+
+/* Largest Screen layout */
+@media (min-width: 1441px) {
+	/* Header-Nav Layout */
+	.App > span {
+		display: inline-block;
+
+		header {
+			margin: 5rem;
+		}
+	
+		nav {
+			div.Nav-Buttons {
+				display: flex;
+				a {
+					margin-left: 3rem;
+					margin-right: 3rem;
+				}
+			}
+		}
+	}
+}

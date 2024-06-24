@@ -1,0 +1,155 @@
+/* Mobile Styles */
+
+
+/* Portrait */
+@media (min-width: 320px) and (max-width: 479px) {
+
+	/* Disable Regular Nav */
+	.Nav-Buttons {
+		display: none;
+	}
+
+	/* Hamburger Menu */
+
+	.Nav-Hamburger-Input {
+		display: none;
+	}
+
+	.Nav-Hamburger-Menu {
+		position: fixed;
+		top: 25px;
+		left: 25px;
+		width: 50px;
+    height: 50px;
+    display: block;
+    border: none;
+		/* Hamburger button */
+    background: linear-gradient(
+      to bottom, 
+      var(--secondary), var(--secondary) 20%,
+      transparent 20%, transparent 40%, 
+      var(--secondary) 40%, var(--secondary) 60%, 
+      transparent 60%, transparent 80%, 
+      var(--secondary) 80%, var(--secondary) 100%
+    );
+	}
+
+	.Nav-Hamburger-Menu .Nav-Hamburger-Sidebar {
+		visibility: hidden;
+		z-index: 4;
+	}
+
+	.Nav-Hamburger-Input:checked + .Nav-Hamburger-Menu .Nav-Hamburger-Sidebar {
+		visibility: visible;
+		left: 0;
+	}
+
+	.Nav-Hamburger-Input:checked ~ .Nav-Hamburger-Overlay {
+		visibility: visible;
+		opacity: 0.4;
+	}
+
+	.Nav-Hamburger-Overlay {
+    position: fixed;
+		z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: var(--quinary);
+	}
+
+	.Nav-Hamburger-Sidebar {
+		visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: var(--secondary);
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+		z-index: 99;
+		display: inline-grid;
+		row-gap: 1em;
+		column-gap: 0em;
+	}
+
+	.Nav-Hamburger-Sidebar a {
+		color: inherit;
+		text-decoration: inherit;
+		background-color: var(--primary);
+		color: var(--text-alt);
+		vertical-align: middle;
+	}
+
+	.Nav-Hamburger-Sidebar a:hover {
+		transition: background-color .2s ease-in;
+		background-color: var(--secondary);
+	}
+	
+	/* Header */
+	header {
+	}
+
+	header .Header-Title {
+		margin-top: 0;
+		padding-left: 75px;
+		height: 50px;
+		text-decoration: none;
+		color: var(--text);
+	}
+
+	.Header-Title h1 {
+		font-size: 1.75em;
+		font-weight: 100;	
+	}
+
+	p {
+		text-align: left;
+		margin-left: 3em;
+		margin-right: 3em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		padding: 2em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		border: 3px solid var(--quinary);
+		background-color: var(--background);
+	}
+}
+
+/* Landscape */
+@media (max-height: 575.98px) and (orientation: landscape) {
+	nav {
+		padding: 0.5em;
+		vertical-align: middle;
+		top: 0;
+		background-color: inherit;
+	}
+
+	.Nav-Buttons {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		vertical-align: middle;
+	}
+
+	.Nav-Buttons a {
+		color: inherit;
+		text-decoration: inherit;
+		background-color: var(--primary);
+		color: var(--text-alt);
+		width: 10em;
+		margin: 0.5em;
+		height: 2.5em;
+	}
+}
+
