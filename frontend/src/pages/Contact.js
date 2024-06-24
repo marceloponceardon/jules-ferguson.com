@@ -1,10 +1,29 @@
 // Contact Page Component
+import { useNavigate } from 'react-router-dom';
 
 function Contact() {
+	const navigate = useNavigate();
 	
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// TODO: Implement form submission
+
+		// Get the form data
+		const formData = new FormData(e.target);
+		const data = {
+			name: formData.get('name'),
+			email: formData.get('email'),
+			message: formData.get('message')
+		};
+
+		// Log the form data
+		console.log(data);
+
+		// Clear the form
+		e.target.reset();
+
+		// Redirect
+		navigate('/contact/thank-you');
 	}
 
 

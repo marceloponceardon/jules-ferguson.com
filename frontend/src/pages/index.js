@@ -3,4 +3,5 @@ import CV from './CV'
 import Gallery from './Gallery'
 import Home from './Home'
 import NoPage from './NoPage.js'
-export { Contact, CV, Gallery, Home, NoPage }
+import Thanks from './Thanks.js'
+export { Contact, CV, Gallery, Home, Thanks, NoPage }
