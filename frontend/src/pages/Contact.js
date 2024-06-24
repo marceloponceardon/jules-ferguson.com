@@ -1,8 +1,13 @@
 // Contact Page Component
 
-
-
 function Contact() {
+	
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// TODO: Implement form submission
+	}
+
+
 	return (
 		<div className="Page" id="contact">
 				<span className="Content">
@@ -12,22 +17,23 @@ function Contact() {
 						Want to work with me? <br />
 						Let's get in touch and figure it out!
 				</p>
-				<form className="contact-form">
+				<form className="contact-form" onSubmit={handleSubmit}>
 					<div className="form-group">
-						<input type="text" name="name" id="name" placeholder={" "} />
+						<input type="text" name="name" id="name" placeholder={" "} required />
 						<label id="name">Name</label>
 					</div>
 
 					<div className="form-group">
-						<input type="text" name="email" id="email" placeholder={" "} />
+						<input type="email" name="email" id="email" placeholder={" "} required />
 						<label id="email">Email</label>
 					</div>
 
 					<div className="form-group">
-						<textarea name="message" id="message" placeholder={" "} />
+						<textarea name="message" id="message" placeholder={" "} required />
 						<label id="message">Message</label>
 					</div>
-			
+					{/* TODO: This is a placeholder for the submit button */}	
+					{/* It doesn't actually do anything yet */}
 					<input type="submit" value="Submit" />
 				</form>
 				<div className="Flex-gap"></div>

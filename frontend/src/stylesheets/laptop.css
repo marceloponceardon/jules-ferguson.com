@@ -19,12 +19,12 @@ header {
 
 			span[id]:not(#SVG-Container) {
 				font-family: 'Lazy Dog', sans-serif;
-				font-size: 2em;
+				font-size: 2rem;
 			}
 
 			#jules {
 				color: var(--background);
-				margin-right: 0.4em;
+				margin-right: 0.4rem;
 			}
 	
 			#ferguson {
@@ -43,10 +43,10 @@ header {
 					z-index: -1;
 					position: relative;
 
-					height: 12em;
-					width: 9.25em;
-					left: -17.7em;
-					top: -5em;
+					height: 12rem;
+					width: 9.25rem;
+					left: -17.7rem;
+					top: -5rem;
 
 					path {
 						fill: var(--secondary);
@@ -97,7 +97,7 @@ nav {
 			text-decoration: none;
 			transition: .3s ease-in;
 			color: var(--primary);
-			margin: 1.5em;
+			margin: 1.5rem;
 			height: auto;
 
 			h1 {
@@ -111,27 +111,27 @@ nav {
 				display: block;
 
 				#blob5 {
-					width: 5em;
-					left: -0.3em;
-					top: -3.5em;
+					width: 5rem;
+					left: -0.3rem;
+					top: -3.5rem;
 				}
 
 				#blob7 {
-					width: 9em;
-					top: -6em;
-					left: -1.25em;
+					width: 9rem;
+					top: -6rem;
+					left: -1.25rem;
 				}
 
 				#blob9 {
-					width: 4em;
-					top: -3em;
-					left: -1.1em;
+					width: 4rem;
+					top: -3rem;
+					left: -1.1rem;
 				}
 
 				#blob11 {
-					width: 7em;
-					left: -0.5em;
-					top: -4.5em;
+					width: 7rem;
+					left: -0.5rem;
+					top: -4.5rem;
 				}
 
 				[id^=blob] {
@@ -181,7 +181,7 @@ nav {
 		h2 {
 			text-align: left;
 			margin-top: 0;
-			font-size: 1em;
+			font-size: 1rem;
 		}
 
 		h3 {
@@ -191,7 +191,7 @@ nav {
 		}
 
 		p {
-			margin: 3em;
+			margin: 3rem;
 			margin-top: 0;
 			text-align: justify;
 			hyphens: none;
@@ -233,11 +233,13 @@ nav {
 		/* Layout */
 		span.Content {
 			display: flex;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
 
 			p {
 				flex: 1;
 				margin-top: 0;
-				margin-right: 1em;
+				margin-right: 1rem;
 
 				h1 {
 					margin-top: 0;
@@ -249,15 +251,14 @@ nav {
 			}
 
 			form {
-				font-family: 'Montserat', sans-serif;
 				flex: 2;
 				display: block;
 				text-align: left;
 
 				div.form-group {
 					margin: 0;
-					margin-top: .5em;
-					margin-bottom: .5em;
+					margin-top: .5rem;
+					margin-bottom: .5rem;
 					height: auto;
 				}
 
@@ -268,11 +269,11 @@ nav {
 					border: 2px solid var(--primary);
 					background-color: transparent;
 					color: var(--text);
-					padding: 1em;
+					padding: 1rem;
 				}
 
 				textarea {
-					height: 12em;
+					min-height: 10rem;
 					/* Disable resizing */
 					resize: none;
 				}
@@ -281,9 +282,8 @@ nav {
 					position: relative;
 					height: 0;
 					width: 0;
-					top: -2.25em;
-					left: 1em;
-					font-family: 'Montserat', sans-serif;
+					top: -2.5rem;
+					left: 1rem;
 					color: var(--primary);
 					transition: 0.1s ease-in;
 					/* Prevent the label from being selected */
@@ -298,33 +298,47 @@ nav {
 				/* The label after the textarea must be translated further */
 				label#message {
 					position: relative;
-					top: -6.75em;
+					top: -9.5rem;
 				}
 
 				input, textarea {
 					box-sizing: border-box;
+					font-family: 'Poppins', sans-serif;
 				}
 
 				/* Translate the label when the input is focused */
-				input[type=text]:focus + label {
-					top: -5em;
-					left: 1.25em;
-					font-size: 0.6em;
+				input:focus + label {
+					top: -3.5rem;
+					left: 1rem;
+					font-size: 0.6rem;
 					transition: 0.2s ease-in;
 				}
 
-				input[type=text]:not(:placeholder-shown) + label {
-					top: -5em;
-					left: 1.25em;
-					font-size: 0.6em;
-					transition: 0.2s ease-in;
+				input:not(:placeholder-shown) + label {
+					top: -3.5rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
+				}
+
+				textarea:focus + label#message {
+					top: -10.1rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
+				}
+
+				textarea:not(:placeholder-shown) + label#message {
+					top: -10.1rem;
+					left: 1rem;
+					font-size: 0.6rem;
+					transition: 0.1s ease-in;
 				}
 
 				input[type=submit] {
 					background-color: var(--primary);
 					color: var(--secondary);
-					margin: 1em;
-					padding: 1em 2em;
+					padding: 1rem 2rem;
 					border: none;
 					border-radius: 10px;
 					cursor: pointer;
@@ -335,6 +349,13 @@ nav {
 
 				input[type=submit]:hover {
 					background-color: var(--secondary);
+					color: var(--primary);
+					transition: color 0.3s ease-in;
+				}
+
+				/* On click, change the color of the button */
+				input[type=submit]:active {
+					background-color: var(--background);
 					color: var(--primary);
 					transition: color 0.3s ease-in;
 				}
@@ -366,11 +387,12 @@ nav {
 
 /* Layouts */
 
+/* Laptop Layout */
 @media (max-width: 1440px) {
 	/* Header-Nav Layout */
 	.App > span {
 		display: flex;
-		margin: 5em;
+		margin: 5rem;
 
 		header {
 			flex: 1;
@@ -378,6 +400,12 @@ nav {
 	
 		nav {
 			flex: 2;
+			div.Nav-Buttons {
+				a {
+					margin-left: 2rem;
+					margin-right: 2rem;
+				}
+			}
 		}
 		
 		div.Flex-gap {
@@ -394,14 +422,16 @@ nav {
 		display: inline-block;
 
 		header {
-			margin: 5em;
+			margin: 5rem;
 		}
 	
 		nav {
-			display: block;
-
 			div.Nav-Buttons {
-					
+				display: flex;
+				a {
+					margin-left: 3rem;
+					margin-right: 3rem;
+				}
 			}
 		}
 	}
