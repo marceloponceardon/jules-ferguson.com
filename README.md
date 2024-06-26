@@ -13,7 +13,7 @@ This project is a collaborative effort to build a portfolio website for Jules Fe
 ## Technology Stack
 - **Front-End:** React
 - **Back-End:** Express
-- **Hosting:** Vercel (Front-End),
+- **Hosting:** Vercel (Front-End), Render (Back-End)
 
 ## Project Structure
 - `frontend/`: Contains the React.js front-end application.
