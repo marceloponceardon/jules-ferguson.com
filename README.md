@@ -30,7 +30,6 @@ This project is a collaborative effort to build a portfolio website for Jules Fe
     - Run `npm install` to install dependencies.
     - Run `npm start` to start the application.
     - Run `npm run dev` to start the application in development mode.
-    - Run `npm build` to build the application.
 
 ## `.env` Configuration
 - `frontend/.env`:
