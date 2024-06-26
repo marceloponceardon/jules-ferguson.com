@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var dotenv = require('dotenv');
 
-var indexRouter = require('./routes/index');
 var cvRouter = require('./routes/cv');
 var contactRouter = require('./routes/contact');
 
@@ -29,7 +28,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.use('/', indexRouter);
 app.use('/cv', cvRouter);
 app.use('/contact', contactRouter);
 
@@ -50,9 +48,11 @@ app.use(function(err, req, res, next) {
 });
 
 // Some info
-console.log('App is running in: ' + process.env.ENV + ' mode');
+console.log('App is running in: ' + process.env.NODE_ENV + ' mode');
 console.log('\tport: ' + process.env.PORT);
 console.log('\tFE: ' + process.env.FRONTEND_URL);
 console.log('\tBE: ' + process.env.BACKEND_URL);
+console.log('\tEMAIL_USER: ' + process.env.EMAIL_USER);
+console.log('\tEMAIL_TO: ' + process.env.EMAIL_TO);
 
 module.exports = app;
