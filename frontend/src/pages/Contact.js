@@ -4,10 +4,9 @@ import { useNavigate } from 'react-router-dom';
 function Contact() {
 	const navigate = useNavigate();
 	
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		// TODO: Implement form submission
-
+	const handleSubmit = async (e) => {
+		e.preventDefault(); // Prevent the default form submission behavior
+	
 		// Get the form data
 		const formData = new FormData(e.target);
 		const data = {
@@ -15,17 +14,35 @@ function Contact() {
 			email: formData.get('email'),
 			message: formData.get('message')
 		};
-
-		// Log the form data
-		console.log(data);
-
-		// Clear the form
-		e.target.reset();
-
-		// Redirect
-		navigate('/contact/thank-you');
-	}
-
+	
+		try {
+			// Make api call
+			const response = await fetch(process.env.BACKEND_URL + '/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+	
+			if (response.ok) {
+				// Clear the form
+				e.target.reset();
+	
+				// Redirect
+				navigate('/contact/thank-you');
+			} else {
+				// Handle error response
+				const errorData = await response.json();
+				console.error('Error:', errorData);
+				// Optionally, display error message to the user
+			}
+		} catch (error) {
+			// Handle fetch error
+			console.error('Fetch error:', error);
+			// Optionally, display error message to the user
+		}
+	};
 
 	return (
 		<div className="Page" id="contact">
