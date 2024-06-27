@@ -1,13 +1,13 @@
 // Contact Page Component
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Contact() {
 	const navigate = useNavigate();
 	
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		// TODO: Implement form submission
-
+	const handleSubmit = async (e) => {
+		e.preventDefault(); // Prevent the default form submission behavior
+	
 		// Get the form data
 		const formData = new FormData(e.target);
 		const data = {
@@ -16,16 +16,52 @@ function Contact() {
 			message: formData.get('message')
 		};
 
-		// Log the form data
-		console.log(data);
-
-		// Clear the form
-		e.target.reset();
-
-		// Redirect
-		navigate('/contact/thank-you');
-	}
-
+		// Display a loading toast
+		const contact_toast = toast.loading('Sending message...')
+		try {
+			// Make api call
+			if (process.env.NODE_ENV === 'development') {
+				console.log('URI:', process.env.REACT_APP_BACKEND_URL + '/contact');
+				console.log('Form data:', data);
+			}
+		
+			const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+	
+			if (response.ok) {
+				// Handle success response
+				toast.update(contact_toast, { type: 'success', render: 'Message sent!', isLoading: false, closeButton: true });
+				navigate('/contact/thank-you');
+				return;
+			} else {
+				// Handle error response
+				const errorData = await response.json();
+				console.error('Error:', errorData);
+				// Optionally, display error message to the user
+				toast.update(contact_toast, {
+					type: 'error',
+					render: 'Failed to send message! (' + errorData.code + ')',
+					isLoading: false,
+					closeButton: true
+				});
+			}
+		} catch (error) {
+			// Handle fetch error
+			console.error('Fetch error:', error);
+			// Optionally, display error message to the user
+			toast.update(contact_toast, {
+				type: 'error',
+				render: 'Failed to send message!',
+				isLoading: false,
+				closeButton: true
+			});
+		}
+	};
 
 	return (
 		<div className="Page" id="contact">
@@ -51,8 +87,6 @@ function Contact() {
 						<textarea name="message" id="message" placeholder={" "} required />
 						<label id="message">Message</label>
 					</div>
-					{/* TODO: This is a placeholder for the submit button */}	
-					{/* It doesn't actually do anything yet */}
 					<input type="submit" value="Submit" />
 				</form>
 				<div className="Flex-gap"></div>

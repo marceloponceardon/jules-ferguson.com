@@ -10,6 +10,9 @@ if (process.env.NODE_ENV === 'production') {
 	console.log = () => {}
 	console.error = () => {}
 	console.debug = () => {}
+} else {
+	console.log('Development mode')
+	console.log('.env:', process.env)
 }
 
 export default function App() {
