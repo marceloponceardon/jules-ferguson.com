@@ -11,6 +11,13 @@ router.get('/download', async (req, res) => {
 		await new Promise(resolve => setTimeout(resolve, 2000));
 	}
 	const filePath = path.join(__dirname, '..', 'public', 'cv', 'cv.pdf');
+	try {
+		fs.accessSync(filePath, fs.constants.R_OK);
+	}	catch (err) {
+		console.error(err);
+		res.status(404).send('File not found');
+		return;
+	}
 	const file = fs.createReadStream(filePath);
 	res.setHeader('Content-Disposition', 'attachment; filename=jules-ferguson-cv.pdf');
 	res.setHeader('Content-Type', 'application/pdf');
@@ -21,6 +28,13 @@ router.get('/download', async (req, res) => {
 // This is used in the contact page
 router.get('/view', async (req, res) => {
 	const filePath = path.join(__dirname, '..', 'public', 'cv', 'cv.pdf');
+	try {
+		fs.accessSync(filePath, fs.constants.R_OK);
+	}	catch (err) {
+		console.error(err);
+		res.status(404).send('File not found');
+		return;
+	}
 	const file = fs.createReadStream(filePath);
 	res.setHeader('Content-Type', 'application/pdf');
 	file.pipe(res);
