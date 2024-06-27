@@ -225,23 +225,48 @@ nav {
 	/* CV */
 	&#cv {
 
-		button {
-			background-color: var(--primary);
-			color: var(--secondary);
-			padding: 1rem 2rem;
-			border: none;
-			border-radius: 10px;
-			cursor: pointer;
-			font-family: 'Lazy Dog', sans-serif;
-			transition: color 0.3s ease-in;
-			position: inline-block;
-		}
-	
-		button:hover {
-			background-color: var(--secondary);
-			color: var(--primary);
-			transition: color 0.3s ease-in;
-	
+		span.Content {
+			margin: 3rem 0;
+			display: block;
+
+			h2 {
+				font-family: 'Lazy Dog', sans-serif;
+				color: var(--primary);
+			}
+
+			button {
+				background-color: var(--primary);
+				color: var(--secondary);
+				padding: 1rem 2rem;
+				border: none;
+				border-radius: 10px;
+				cursor: pointer;
+				font-family: 'Lazy Dog', sans-serif;
+				transition: color 0.3s ease-in;
+			}
+		
+			button:hover {
+				background-color: var(--secondary);
+				color: var(--primary);
+				transition: color 0.3s ease-in;
+		
+			}
+
+			div.CV-Container {
+				display: flex;
+				justify-content: center;
+				.textLayer, .annotationLayer {
+					/* Hide the text layer */
+					display: none;
+				}
+			}
+
+			p {
+				position: relative;
+				text-align: center;
+				text-align-last: center;
+				display: hidden;
+			}
 		}
 	}
 
@@ -251,8 +276,7 @@ nav {
 		/* Layout */
 		span.Content {
 			display: flex;
-			margin-top: 3rem;
-			margin-bottom: 3rem;
+			margin: 3rem 0;
 
 			p {
 				flex: 1;
@@ -306,10 +330,6 @@ nav {
 					transition: 0.1s ease-in;
 					/* Prevent the label from being selected */
 					user-select: none;
-					-webkit-user-select: none;
-					-moz-user-select: none;
-					-ms-user-select: none;
-					-o-user-select: none;
 					z-index: -1;
 				}
 

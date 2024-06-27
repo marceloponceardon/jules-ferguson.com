@@ -1,7 +1,17 @@
 // CV component
 import { toast } from 'react-toastify';
+import { pdfjs } from 'react-pdf';
+import { useState } from 'react';
+import { Document, Page } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+	'pdfjs-dist/build/pdf.worker.min.mjs',
+	import.meta.url,
+).toString();
+
 function CV() {
 
+	// URL for API calls related to CV
 	const cvURL = process.env.REACT_APP_BACKEND_URL + "/cv";
 	
 	const handleDownload = async (response) => {
@@ -24,9 +34,10 @@ function CV() {
 				const url = window.URL.createObjectURL(blob);
 				const a = document.createElement('a');
 				a.href = url;
-				a.download = 'CV.pdf';
+				a.download = 'jules-ferguson-cv.pdf';
 				a.click();
 				toast.update(downloadToast, {
+					type: 'success',
 					render: 'CV downloaded successfully',
 					isLoading: false,
 					closeButton: true
@@ -50,12 +61,31 @@ function CV() {
 		}
 	};
 
+	// PDF viewer
+	const [numPages, setNumPages] = useState(null);
+	const [pageNumber, setPageNumber] = useState(1);
+
+	function onDocumentLoadSuccess({ numPages }) {
+		setNumPages(numPages);
+	}
+
 	return (
 		<div className="Page" id="cv">
-			<h2>CV</h2>
-			<button onClick={handleDownload}>
-				Download as PDF
-			</button>
+			<span className="Content">
+				<h2>CV</h2>
+				<div className="CV-Container">
+					<Document 
+						file={cvURL + '/view'}
+						onLoadSuccess={onDocumentLoadSuccess}
+					>
+						<Page pageNumber={pageNumber} />
+					</Document>
+				</div>
+				<p>Page {pageNumber} of {numPages}</p>
+				<button onClick={handleDownload}>
+					Download as PDF
+				</button>
+			</span>
 		</div>
 	);
 }
