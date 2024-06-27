@@ -225,6 +225,24 @@ nav {
 	/* CV */
 	&#cv {
 
+		button {
+			background-color: var(--primary);
+			color: var(--secondary);
+			padding: 1rem 2rem;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			font-family: 'Lazy Dog', sans-serif;
+			transition: color 0.3s ease-in;
+			position: inline-block;
+		}
+	
+		button:hover {
+			background-color: var(--secondary);
+			color: var(--primary);
+			transition: color 0.3s ease-in;
+	
+		}
 	}
 
 	/* Contact */
