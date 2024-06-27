@@ -231,6 +231,7 @@ nav {
 
 			h2 {
 				font-family: 'Lazy Dog', sans-serif;
+				font-size: 2rem;
 				color: var(--primary);
 			}
 
@@ -250,6 +251,47 @@ nav {
 				color: var(--primary);
 				transition: color 0.3s ease-in;
 		
+			}
+
+			button.CV-Button {
+				padding: 0;
+				background-color: transparent;
+				border-radius: 0;
+				margin-bottom: 1rem;
+				&#previous {
+					/* Left facing triangle */
+					width: 0;
+					height: 0;
+					border-top: 1.5rem solid transparent;
+					border-bottom: 1.5rem solid transparent;
+					border-right: 2rem solid var(--secondary);
+					margin-right: 1rem;
+					/* Hide the text */
+					color: transparent;
+					transition: 0.3s ease-in;
+					/* On hover, change the color of the triangle */
+					&:hover {
+						border-right: 2rem solid var(--primary);
+						transition: 0.3s ease-in;
+					}
+				}
+				&#next {
+					/* Right facing triangle */
+					width: 0;
+					height: 0;
+					border-top: 1.5rem solid transparent;
+					border-bottom: 1.5rem solid transparent;
+					border-left: 2rem solid var(--secondary);
+					margin-left: 1rem;
+					/* Hide the text */
+					color: transparent;
+					transition: 0.3s ease-in;
+					/* On hover, change the color of the triangle */
+					&:hover {
+						border-left: 2rem solid var(--primary);
+						transition: 0.3s ease-in;
+					}
+				}
 			}
 
 			div.CV-Container {

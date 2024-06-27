@@ -63,4 +63,9 @@ footer a .social-svg:hover .social-svg-mask{
 	fill: var(--primary) !important;
 }
 
+/* Change toastify font */
+.Toastify__toast-body {
+	font-family: 'Poppins', sans-serif;
+}
+
 @import url('./laptop.css');

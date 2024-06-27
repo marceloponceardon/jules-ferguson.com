@@ -77,11 +77,23 @@ function CV() {
 					<Document 
 						file={cvURL + '/view'}
 						onLoadSuccess={onDocumentLoadSuccess}
+						onLoadFailure={(error) => console.error('PDF load error:', error)}
 					>
 						<Page pageNumber={pageNumber} />
 					</Document>
 				</div>
+				{/* Page number and next and previous buttons */}
 				<p>Page {pageNumber} of {numPages}</p>
+				<button className="CV-Button" id="previous"
+					disabled={pageNumber <= 1}
+					onClick={() => setPageNumber(pageNumber - 1)}
+				>Previous</button>
+				<button className="CV-Button" id="next"
+					disabled={pageNumber >= numPages}
+					onClick={() => setPageNumber(pageNumber + 1)}
+				>Next</button>
+				<br />
+				{/* Download button */}
 				<button onClick={handleDownload}>
 					Download as PDF
 				</button>
