@@ -5,6 +5,11 @@ require('dotenv').config();
 
 router.post('/', async (req, res) => {
 	const { name, email, message } = req.body;
+	if (!name || !email || !message) {
+		res.status(400).send('All fields are required');
+		return;
+	}
+
 	if (process.env.NODE_ENV !== 'production') {
 		console.log('Received:', { name, email, message });
 		// Send a dummy response after 1 second
@@ -12,7 +17,7 @@ router.post('/', async (req, res) => {
 			res.status(200).send('Email sent successfully');
 		},
 		1000);
-		return;
+//		return;
 	}
 	
 	let transporter = nodemailer.createTransport({
