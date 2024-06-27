@@ -15,20 +15,16 @@ function Contact() {
 			email: formData.get('email'),
 			message: formData.get('message')
 		};
-	
+
+		// Display a loading toast
+		const contact_toast = toast.loading('Sending message...')
 		try {
 			// Make api call
 			if (process.env.NODE_ENV === 'development') {
 				console.log('URI:', process.env.REACT_APP_BACKEND_URL + '/contact');
 				console.log('Form data:', data);
 			}
-
-			// Send a POST request to the backend
-			// Toast to show the user that the message is being sent
-			toast.info('Sending message...',
-				{ position: 'bottom-center',
-				});
-			
+		
 			const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/contact', {
 				method: 'POST',
 				headers: {
@@ -38,33 +34,33 @@ function Contact() {
 			});
 	
 			if (response.ok) {
-				// Clear the form
-				e.target.reset();
-				
-				// Display a toast message on success
-				toast.success('Message sent successfully!',
-					{ position: 'bottom-center',
-					});
-				// Wait till the toast message is gone before redirecting
-				setTimeout(() => {
-					navigate('/contact/thank-you');
-				}, 3000);
+				// Handle success response
+				toast.update(contact_toast, { type: 'success', render: 'Message sent!', isLoading: false, closeButton: true });
+				navigate('/contact/thank-you');
 				return;
 			} else {
 				// Handle error response
 				const errorData = await response.json();
 				console.error('Error:', errorData);
 				// Optionally, display error message to the user
+				toast.update(contact_toast, {
+					type: 'error',
+					render: 'Failed to send message! (' + errorData.code + ')',
+					isLoading: false,
+					closeButton: true
+				});
 			}
 		} catch (error) {
 			// Handle fetch error
 			console.error('Fetch error:', error);
 			// Optionally, display error message to the user
-		}
-		// Display a toast message on failure
-		toast.error('Failed to send message. Please try again later.',
-			{ position: 'bottom-center',
+			toast.update(contact_toast, {
+				type: 'error',
+				render: 'Failed to send message!',
+				isLoading: false,
+				closeButton: true
 			});
+		}
 	};
 
 	return (

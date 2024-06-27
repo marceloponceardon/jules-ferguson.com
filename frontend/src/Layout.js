@@ -23,6 +23,8 @@ function Layout() {
     </div>
 		<ToastContainer 
 			newestOnTop
+			position="bottom-center"
+			closeButton
 		/>
 		</>
   );
