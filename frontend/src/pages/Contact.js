@@ -1,5 +1,6 @@
 // Contact Page Component
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Contact() {
 	const navigate = useNavigate();
@@ -36,6 +37,7 @@ function Contact() {
 	
 				// Redirect
 				navigate('/contact/thank-you');
+				return;
 			} else {
 				// Handle error response
 				const errorData = await response.json();
@@ -47,6 +49,10 @@ function Contact() {
 			console.error('Fetch error:', error);
 			// Optionally, display error message to the user
 		}
+		// Display a toast message on failure
+		toast.error('Failed to send message. Please try again later.',
+			{ position: 'bottom-center',
+			});
 	};
 
 	return (
@@ -73,8 +79,6 @@ function Contact() {
 						<textarea name="message" id="message" placeholder={" "} required />
 						<label id="message">Message</label>
 					</div>
-					{/* TODO: This is a placeholder for the submit button */}	
-					{/* It doesn't actually do anything yet */}
 					<input type="submit" value="Submit" />
 				</form>
 				<div className="Flex-gap"></div>

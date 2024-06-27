@@ -1,6 +1,8 @@
 import { Header, Footer, Nav } from './components';
 import { Outlet } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Layout() {
   return (
@@ -19,6 +21,7 @@ function Layout() {
 			</TransitionGroup>
 			<Footer />
     </div>
+		<ToastContainer />
 		</>
   );
 }
