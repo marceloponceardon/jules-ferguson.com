@@ -17,7 +17,12 @@ function Contact() {
 	
 		try {
 			// Make api call
-			const response = await fetch(process.env.BACKEND_URL + '/contact', {
+			if (process.env.NODE_ENV === 'development') {
+				console.log('URI:', process.env.REACT_APP_BACKEND_URL + '/contact');
+				console.log('Form data:', data);
+			}
+			
+			const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/contact', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

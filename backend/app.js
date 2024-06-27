@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -12,6 +13,7 @@ var contactRouter = require('./routes/contact');
 dotenv.config();
 
 var app = express();
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -51,7 +53,6 @@ app.use(function(err, req, res, next) {
 console.log('App is running in: ' + process.env.NODE_ENV + ' mode');
 console.log('\tport: ' + process.env.PORT);
 console.log('\tFE: ' + process.env.FRONTEND_URL);
-console.log('\tBE: ' + process.env.BACKEND_URL);
 console.log('\tEMAIL_USER: ' + process.env.EMAIL_USER);
 console.log('\tEMAIL_TO: ' + process.env.EMAIL_TO);
 

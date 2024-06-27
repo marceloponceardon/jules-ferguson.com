@@ -5,12 +5,14 @@ import './index.css';
 import Layout from './Layout';
 import { Contact, CV, Gallery, Home, Thanks, NoPage } from './pages';
 import reportWebVitals from './reportWebVitals';
-import dotenv from 'dotenv';
 
 if (process.env.NODE_ENV === 'production') {
 	console.log = () => {}
 	console.error = () => {}
 	console.debug = () => {}
+} else {
+	console.log('Development mode')
+	console.log('.env:', process.env)
 }
 
 export default function App() {
