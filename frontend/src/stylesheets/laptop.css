@@ -385,6 +385,13 @@ nav {
 	justify-content: center;
 }
 
+/* Thanks */
+#thanks.Page {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 /* Layouts */
 
 /* Laptop Layout */
