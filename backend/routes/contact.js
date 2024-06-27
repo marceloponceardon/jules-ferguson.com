@@ -7,7 +7,11 @@ router.post('/', async (req, res) => {
 	const { name, email, message } = req.body;
 	if (process.env.NODE_ENV !== 'production') {
 		console.log('Received:', { name, email, message });
-		res.status(200).send('Email sent successfully');
+		// Send a dummy response after 1 second
+		setTimeout(() => {
+			res.status(200).send('Email sent successfully');
+		},
+		1000);
 		return;
 	}
 	

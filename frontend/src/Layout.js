@@ -21,7 +21,9 @@ function Layout() {
 			</TransitionGroup>
 			<Footer />
     </div>
-		<ToastContainer />
+		<ToastContainer 
+			newestOnTop
+		/>
 		</>
   );
 }

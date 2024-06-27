@@ -22,6 +22,12 @@ function Contact() {
 				console.log('URI:', process.env.REACT_APP_BACKEND_URL + '/contact');
 				console.log('Form data:', data);
 			}
+
+			// Send a POST request to the backend
+			// Toast to show the user that the message is being sent
+			toast.info('Sending message...',
+				{ position: 'bottom-center',
+				});
 			
 			const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/contact', {
 				method: 'POST',
@@ -34,9 +40,15 @@ function Contact() {
 			if (response.ok) {
 				// Clear the form
 				e.target.reset();
-	
-				// Redirect
-				navigate('/contact/thank-you');
+				
+				// Display a toast message on success
+				toast.success('Message sent successfully!',
+					{ position: 'bottom-center',
+					});
+				// Wait till the toast message is gone before redirecting
+				setTimeout(() => {
+					navigate('/contact/thank-you');
+				}, 3000);
 				return;
 			} else {
 				// Handle error response
