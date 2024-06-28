@@ -463,6 +463,51 @@ nav {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin: 3rem 0;
+
+	h2 {
+		font-family: 'Lazy Dog', sans-serif;
+		font-size: 2rem;
+		color: var(--primary);
+	}
+
+	.ImageFlex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.ImageContainer {
+			margin: 1rem;
+
+			img {
+				max-width: 90vw;
+				max-height: 90vh;
+				border: 0px solid black;
+			}
+		}
+	}
+
+	button {
+		&.BackToTop {
+		background-color: var(--primary);
+		color: var(--secondary);
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 10px;
+		cursor: pointer;
+		font-family: 'Lazy Dog', sans-serif;
+		transition: color 0.3s ease-in;
+		position: sticky;
+		bottom: 1rem;
+		margin: 1rem;
+		}
+
+		&.BackToTop:hover {
+			background-color: var(--secondary);
+			color: var(--primary);
+			transition: color 0.3s ease-in;
+		}
+	}
 }
 
 /* Thanks */
