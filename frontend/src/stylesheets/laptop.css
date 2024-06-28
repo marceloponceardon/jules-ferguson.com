@@ -309,10 +309,18 @@ nav {
 			div.CV-Container {
 				display: flex;
 				justify-content: center;
+				box-sizing: border-box;
+
 				.textLayer, .annotationLayer {
 					/* Hide the text layer */
 					display: none;
 				}
+
+				.react-pdf__Page__canvas {
+					min-height: 80vh !important;
+					width: auto !important;
+				}
+
 			}
 
 			p {
