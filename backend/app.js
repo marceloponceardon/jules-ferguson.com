@@ -8,6 +8,7 @@ var dotenv = require('dotenv');
 
 var cvRouter = require('./routes/cv');
 var contactRouter = require('./routes/contact');
+var indexRouter = require('./routes/index');
 
 // Load env vars
 dotenv.config();
@@ -30,6 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
+app.use('/', indexRouter);
 app.use('/cv', cvRouter);
 app.use('/contact', contactRouter);
 
