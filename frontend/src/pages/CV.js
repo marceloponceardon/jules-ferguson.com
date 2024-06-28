@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { pdfjs } from 'react-pdf';
 import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
+import cvDriveURL from '../content/cv.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 	'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -13,6 +14,7 @@ function CV() {
 
 	// URL for API calls related to CV
 	const cvURL = process.env.REACT_APP_BACKEND_URL + "/cv";
+
 	
 	const handleDownload = async (response) => {
 		const downloadToast = toast.loading('Downloading CV...');	
@@ -75,9 +77,19 @@ function CV() {
 				<h2>CV</h2>
 				<div className="CV-Container">
 					<Document 
-						file={cvURL + '/view'}
+						file={cvDriveURL}
 						onLoadSuccess={onDocumentLoadSuccess}
-						onLoadFailure={(error) => console.error('PDF load error:', error)}
+						onLoadError={(error) => {
+							console.error('Document load error:', error)
+							toast.error('Failed to load CV: ' + error.message, 
+								{
+									position: 'bottom-center',
+									hideProgressBar: true,
+									closeOnClick: true,
+									progress: undefined,
+								})
+							}
+						}
 					>
 						<Page pageNumber={pageNumber} />
 					</Document>
