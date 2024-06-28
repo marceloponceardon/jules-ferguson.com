@@ -196,23 +196,35 @@ nav {
 			text-align: justify;
 			hyphens: none;
 		}
+
+		img {
+			object-fit: contain;
+			object-position: top;
+			display: block;
+			max-width: 33vw;
+			max-height: 90vh;
+			float: left;
+			/* 3rem to right and bottom */
+			margin: 0 3rem 3rem 3rem;
+			
+		}
 		
 		/* Layout */
 		span.Content {
+			margin: 3rem 0;
 			display: flex;
+			align-items: flex-start;
 
-			img {
-				flex: 1;
-				height: auto;
-				border: 3px solid black;
-			}
-
-			p {
-				flex: 2;
+			div.Text-Container {
+				flex: 7;
 			}
 
 			div.Flex-gap {
 				flex: 1;
+			}
+
+			&::after {
+				clear: both;
 			}
 		}
 	}
