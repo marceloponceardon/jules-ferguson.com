@@ -15,7 +15,21 @@ if (process.env.NODE_ENV === 'production') {
 	console.log('.env:', process.env)
 }
 
+// When the app is loaded, the browser makes a request to the API to "wake it up" since it's hosted on Render's free tier.
+// This is to prevent the API from going to sleep after 30 minutes of inactivity.
+
+async function wakeUpAPI() {
+	fetch(process.env.REACT_APP_BACKEND_URL).then(response => {
+		if (response.ok) {
+			console.log('API is awake')
+		} else {
+			console.error('API is not awake')
+		}
+	})
+};
+
 export default function App() {
+	wakeUpAPI();
   return (
     <BrowserRouter>
       <Routes>

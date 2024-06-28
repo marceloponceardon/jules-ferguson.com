@@ -18,7 +18,7 @@ function Gallery() {
 
 	return (
 		<div className="Page" id="gallery">
-			<h2>Gallery</h2>
+			<h2>Selected Works</h2>
 			<div className="ImageFlex">
 				{images.map((image, index) => {
 					return (
